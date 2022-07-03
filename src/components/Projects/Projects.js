@@ -3,10 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import wildlife from "../../Assets/Projects/wildlife.jpg";
-import emotion from "../../Assets/Projects/emotion.png";
 import seller from "../../Assets/Projects/seller.png";
 import corono from "../../Assets/Projects/corono.jpeg";
-import suicide from "../../Assets/Projects/suicide.png";
+import clothing from "../../Assets/Projects/clothing.png";
 import fitness from "../../Assets/Projects/fitness.png";
 
 function Projects() {
@@ -29,6 +28,17 @@ function Projects() {
               description="Covid Tracker using particluar country, build with react.js, Material-UI. Have features which allows user to search for any country using COVID19 Api."
               ghLink="https://github.com/2710ankit/Corona_Tracker"
               // demoLink="https://chatify-49.web.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={clothing}
+              isBlog={false}
+              title="Pulsative"
+              description="Clothin App where user can authenticate using Google Auth, and can Update the cart. Demonstrate the use State Management is React. Build with React.js  and Firebase Authentication"
+              ghLink="https://github.com/2710ankit/clothing"
+              demoLink="https://clothin-hub.netlify.app/"
             />
           </Col>
 
@@ -58,7 +68,7 @@ function Projects() {
             <ProjectCard
               imgPath={wildlife}
               isBlog={false}
-              title="Plant AI"
+              title="Wildlife"
               description="Basic React App to Demostrate the use of Components reusablity, navigation, routing "
               ghLink="https://github.com/2710ankit/wildlife"
               demoLink="https://wildlifee.herokuapp.com/"
