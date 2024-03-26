@@ -38,7 +38,7 @@ function Home2() {
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">React.js</b> and
+              with <b className="purple">React.js, Node.js, Express.js</b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -47,7 +47,7 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> Angular.js</b>
+                <b className="purple"> Angular, NEXT.js, NEST.js</b>
               </i>
             </p>
           </Col>

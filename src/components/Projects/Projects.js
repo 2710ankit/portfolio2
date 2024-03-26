@@ -7,8 +7,57 @@ import seller from "../../Assets/Projects/seller.png";
 import corono from "../../Assets/Projects/corono.jpeg";
 import clothing from "../../Assets/Projects/clothing.png";
 import fitness from "../../Assets/Projects/fitness.png";
+import industrybuying from "../../Assets/Projects/industrybuying.png";
 
 function Projects() {
+  const projects = [
+
+
+    {
+      imgPath: industrybuying,
+      title: "Industrybuying",
+      description:
+        "Main Website of IndustryBuying.com. Migrating from Angular 15 to Angular 17, and django to NEST.js",
+
+      demoLink: "https://industrybuying.com/",
+    },
+
+    {
+      imgPath: seller,
+      title: "Seller Panel",
+      description:
+        "Seller Panel for IndustryBuying.com where vendors can track their stocks and orders. Migrated from Angular.js to Angular 16 and IONIC",
+
+      demoLink: "https://seller.industrybuying.com/",
+    },
+    {
+      imgPath: corono,
+      title: "Corona Tracker",
+      description:
+        "Covid Tracker using particluar country, build with react.js, Material-UI. Have features which allows user to search for any country using COVID19 Api.",
+      ghLink: "https://github.com/2710ankit/Corona_Tracker",
+    },
+
+    {
+      imgPath: clothing,
+      title: "Clothing",
+      description:
+        "Clothin App where user can authenticate using Google Auth, and can Update the cart. Demonstrate the use State Management is React. Build with React.js  and Firebase Authentication",
+      ghLink: "https://github.com/2710ankit/clothing",
+      demoLink: "https://clothin-hub.netlify.app/",
+    },
+
+    {
+      imgPath: fitness,
+      title: "Pulsative",
+      description:
+        "Fitness App where user can search any exercise using name, target muscle or equipment. Build with React.js, Material Ui and Rapid API",
+      ghLink: "https://github.com/2710ankit/fitness-app",
+      demoLink: "https://pulsative.netlify.app/",
+    },
+
+   
+  ];
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -20,60 +69,19 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={corono}
-              isBlog={false}
-              title="Corona Tracker"
-              description="Covid Tracker using particluar country, build with react.js, Material-UI. Have features which allows user to search for any country using COVID19 Api."
-              ghLink="https://github.com/2710ankit/Corona_Tracker"
-              // demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={clothing}
-              isBlog={false}
-              title="Pulsative"
-              description="Clothin App where user can authenticate using Google Auth, and can Update the cart. Demonstrate the use State Management is React. Build with React.js  and Firebase Authentication"
-              ghLink="https://github.com/2710ankit/clothing"
-              demoLink="https://clothin-hub.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={fitness}
-              isBlog={false}
-              title="Pulsative"
-              description="Fitness App where user can search any exercise using name, target muscle or equipment. Build with React.js, Material Ui and Rapid API"
-              ghLink="https://github.com/2710ankit/fitness-app"
-              demoLink="https://pulsative.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={seller}
-              isBlog={false}
-              title="Seller Panel"
-              description="Seller Panel for IndustryBuying.com where vendors can track their stocks and orders, and can do changes in their profiles or can request admin. Build with Angularjs, Angular Material"
-              // ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://seller.industrybuying.com/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={wildlife}
-              isBlog={false}
-              title="Wildlife"
-              description="Basic React App to Demostrate the use of Components reusablity, navigation, routing "
-              ghLink="https://github.com/2710ankit/wildlife"
-              demoLink="https://wildlifee.herokuapp.com/"
-            />
-          </Col>
+          {projects.map((p) => {
+            return (
+              <Col key={p.title} md={4} className="project-card">
+                <ProjectCard
+                  imgPath={p.imgPath}
+                  title={p.title}
+                  description={p.description}
+                  ghLink={p.ghLink}
+                  demoLink={p.demoLink}
+                />
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </Container>
